@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Project | Home</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>Minecraft API</header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main.about') }}">About</a></li>
+                <li><a href="{{ url_for('main.wiki') }}">Wiki</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="{{ url_for('main.upload_category_data', category='armour') }}" method="post">
+                <input name="name" type="text">
+                <input name="armour_points" type="text">
+                <input name="durability" type="text">
+                <input name="description" type="text">
+                <input name="category" type="text">
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        <footer></footer>
+    </div>   
+</body>
+</html>

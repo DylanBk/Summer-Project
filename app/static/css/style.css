@@ -1,0 +1,56 @@
+:root {
+    --minecraft-green: #5b8731;
+    --minecraft-green-dark: #527a2d;
+    --minecraft-green-darkest: #3e5c20;
+    --minecraft-brown: #854f2b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3rem 0rem;
+    background-color: var(--minecraft-green);
+    color: white;
+    font-size: xx-large;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+    background-color: var(--minecraft-green-dark);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    padding: 0.5rem;
+    margin: 0 1rem;
+}

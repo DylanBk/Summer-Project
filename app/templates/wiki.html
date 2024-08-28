@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Project | Wiki</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>Minecraft API | Wiki</header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                <li><a href="{{ url_for('main.about') }}">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="wiki-data-select-container">
+                <form action="{{ url_for('main.get_category_data, category=') }}" method="get">
+                    <select name="data-category-selector" id="data-category-selector">
+                        <option value="armour">Armour</option>
+                        <option value="blocks">Blocks</option>
+                        <option value="food">Food</option>
+                        <option value="items">Items</option>
+                        <option value="mobs">Mobs</option>
+                        <option value="potions">Potions</option>
+                        <option value="tools">Tools</option>
+                    </select>
+                    <button type="submit">Select</button>
+                </form>
+            </div>
+            <div id="wiki-data-container"></div>
+        </main>
+        <footer></footer>
+    </div>    
+</body>
+</html>
